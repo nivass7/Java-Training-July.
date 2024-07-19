@@ -1,0 +1,58 @@
+import java.util.Scanner;
+
+public class String_counts
+{
+    public static void main(String[] args) {
+        Scanner ip=new Scanner(System.in);
+        String st=ip.nextLine();
+        int low=0,upp=0,dig=0,vowel=0,spe=0,cons=0,space=0;
+        char c,b;
+        for (int i = 0; i < st.length(); i++) {
+            c=st.charAt(i);
+            if(Character.isUpperCase(c))
+            {
+                upp++;
+            }
+            else if(Character.isLowerCase(c))
+            {
+                low++;
+            } else if (Character.isDigit(c))
+            {
+                dig++;
+            } else if (Character.isWhitespace(c))
+            {
+                space++;
+            } else {
+                spe++;
+            }
+        }
+        for (int i = 0; i < st.length(); i++) {
+            b=st.charAt(i);
+            b=Character.toLowerCase(b);
+            if(b=='a'||b=='e'||b=='i'||b=='o'||b=='u')
+            {
+                vowel++;
+            }
+            else if (Character.isAlphabetic(b))
+                cons++;
+        }
+        System.out.println("UpperCase: "+upp);
+        System.out.println("LowerCase: "+low);
+        System.out.println("Digits: "+dig);
+        System.out.println("Special: "+spe);
+        System.out.println("Vowels: "+vowel);
+        System.out.println("Consonants: "+cons);
+        System.out.println("Space: "+space);
+    }
+}
+
+output:
+
+WelCOme @@ 2 3 
+UpperCase: 3
+LowerCase: 4
+Digits: 2
+Special: 2
+Vowels: 3
+Consonants: 4
+Space: 4
