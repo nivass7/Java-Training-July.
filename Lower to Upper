@@ -1,0 +1,22 @@
+import java.util.Scanner;
+public class upper_case_to_lower_case{
+    public static void main(String[] args) {
+        Scanner ip=new Scanner(System.in);
+        String st=ip.nextLine();
+        String res="";
+        char c;
+        for (int i = 0; i < st.length(); i++) {
+            c = st.charAt(i);
+            if (Character.isUpperCase(c))
+                res+=Character.toLowerCase(c);
+            else
+                res+=Character.toUpperCase(c);
+        }
+        System.out.print(res);
+    }
+}
+
+output:
+
+WelCome
+wELcOME
